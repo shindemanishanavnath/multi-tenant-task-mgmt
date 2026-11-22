@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:taskdb-test;DB_CLOSE_DELAY=-1
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: false
+
+jwt:
+  secret: test-secret-key-that-is-long-enough-for-hs256-signing
+  expiration-minutes: 30
+
+logging:
+  level:
+    org.hibernate.SQL: warn
